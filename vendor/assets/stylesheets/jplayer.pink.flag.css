@@ -33,8 +33,9 @@ div.jp-video {
 	background-color:#3a2a45;
 }
 div.jp-audio {
-	width:201px;
-	padding:20px;
+	width:100%;
+	height:44px;
+/*padding:20px;*/
 }
 
 div.jp-video-270p {
@@ -85,8 +86,8 @@ div.jp-interface {
 
 
 div.jp-audio .jp-interface {
-	height: 80px;
-	padding-top:30px;
+	/*height: 80px;*/
+	/*padding-top:30px;*/
 }
 
 /* @group CONTROLS */
@@ -104,7 +105,7 @@ div.jp-interface ul.jp-controls {
 	list-style-type:none;
 	padding: 1px 0 2px 1px;
 	overflow:hidden;
-	width: 201px;
+	width: 150px;
 	height: 34px;
 }
 
@@ -316,11 +317,12 @@ div.jp-seeking-bg {
 
 .jp-progress {
 	background: url("jplayer.pink.flag.jpg") 0px -240px no-repeat;
-	width: 197px;
-	height: 13px;
-	padding: 0 2px 2px 2px;
-	margin-bottom: 4px;
+	width: 150px;
+	height: 5px;
+	padding: 1px 0px 2px 2px;
+	/*margin-bottom: 4px;*/
 	overflow:hidden;
+	margin: 0 auto;
 }
 
 div.jp-video .jp-progress {
@@ -440,18 +442,18 @@ div.jp-video .jp-volume-bar {
 /* @group current time and duration */
 
 .jp-current-time, .jp-duration {
-	width:70px;
+	/*width:70px;*/
 	font-size:.5em;
-	color: #8c7a99;
+	/*color: #8c7a99;*/
 }
 
 .jp-current-time {
-	float: left;
+	/*float: left;*/
 }
 
 .jp-duration {
-	float: right;
-	text-align:right;
+	/*float: right;
+	text-align:right;*/
 }
 
 .jp-video .jp-current-time {
@@ -517,7 +519,7 @@ div.jp-type-playlist div.jp-playlist li.jp-playlist-current {
 }
 
 div.jp-type-playlist div.jp-playlist li.jp-playlist-current a{
-	color: #e892e9;
+	/*color: #e892e9;*/
 }
 
 
@@ -630,3 +632,22 @@ div.jp-playlist ul li.jp-playlist-current {
 }
 
 /* @end */
+
+/* Nathan */
+.jp-times {
+	float: right;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+}
+
+.jp-playlist {
+	float: right;
+	padding-left: 10px;
+	padding-top: 10px;
+}
+
+.jp-control-box {
+	float: right;
+	padding-left: 10px;
+}

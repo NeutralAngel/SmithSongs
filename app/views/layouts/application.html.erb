@@ -3,12 +3,96 @@
 <head>
   <title>Smithsongs</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag    "jplayer.pink.flag", :media => "all" %>
   <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "jquery.jplayer", "jplayer.playlist" %>
+  
   <%= csrf_meta_tags %>
+
+  <script type="text/javascript">
+
+$(document).ready(function(){
+  /*var currentTrack = 0;
+  
+  var playList = [
+    { title: "You Showed Me", artist: "Enoch Light and the Glittering Guitars", file: "https://s3.amazonaws.com/SmithSongsNN/music/ClarkWhiteleather.mp3" },
+    { title: "I'm Gonna Love You...", artist: "Jimmy Smith", file: "http://soulsizzle.com/demos/jPlayer/mp3/jimmysmith_imgonna.mp3" }
+  ];*/
+
+  new jPlayerPlaylist({
+    jPlayer: "#jquery_jplayer_1",
+    cssSelectorAncestor: "#jp_container_1"
+  }, [
+    {
+      title:"Clark Whiteleather",
+      mp3:"https://s3.amazonaws.com/SmithSongsNN/music/ClarkWhiteleather.mp3"
+    },
+    {
+      title:"Start Today",
+      mp3:"https://s3.amazonaws.com/SmithSongsNN/music/StartToday.mp3"
+    }
+  ], {
+    swfPath: "/",
+    supplied: "mp3",
+    solution: "html, flash"
+  });
+
+  
+});
+
+
+  </script>
 </head>
+
 <body>
 
-<%= yield %>
+  <div id="jquery_jplayer_1" class="jp-jplayer"></div>
+
+    <div id="jp_container_1" class="jp-audio">
+      <div class="jp-type-playlist">
+        <div class="jp-gui jp-interface">
+        
+        <div class="jp-times">
+          <div class="jp-current-time"></div>
+          <div class="jp-duration"></div>
+        </div>
+
+        <div class="jp-control-box">
+          <ul class="jp-controls">
+            <li><a href="javascript:;" class="jp-previous" tabindex="1">previous</a></li>
+            <li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>
+            <li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a></li>
+            <li><a href="javascript:;" class="jp-next" tabindex="1">next</a></li>
+          </ul>
+          <div class="jp-progress">
+            <div class="jp-seek-bar">
+              <div class="jp-play-bar"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="jp-playlist">
+          <ul>
+            <li></li>
+          </ul>
+        </div>
+
+
+        
+ 
+    
+        </div>
+ 
+        <div class="jp-no-solution">
+          <span>Update Required</span>
+          To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+        </div>
+      </div>
+    </div> 
+
+    <div data-pjax-container>
+      <%= yield %>
+    <div>
 
 </body>
 </html>
