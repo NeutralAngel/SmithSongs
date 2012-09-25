@@ -15,3 +15,5 @@ $(document).ready ->
     solution: "html, flash"
 
   myPlaylist = new jPlayerPlaylist(cssSelector, playlist, options)
+
+ 
