@@ -82,7 +82,7 @@ class VenuesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to venues_url }
       format.json { head :no_content }
-      format.js   { render nothing: true}
+      format.js
     end
   end
 end

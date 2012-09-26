@@ -1,8 +1,10 @@
 jQuery(function($) {
+  deleteFade();
+});
 
+function deleteFade(){
   $('.delete_venue').bind('ajax:success', function() {
-    debugger;
       $(this).closest('tr').fadeOut();
       return false;
     });
-});
+}

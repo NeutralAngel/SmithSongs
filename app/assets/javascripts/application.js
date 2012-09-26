@@ -13,10 +13,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.pjax
+//= require jquery.ui.datepicker
 //= require_tree .
 
 $(function() {
-  $('input:not([data-remote]):not([data-behavior]):not([data-skip-pjax])').pjax('[data-pjax-container]');
   $('a:not([data-remote]):not([data-behavior]):not([data-skip-pjax])').pjax('[data-pjax-container]');
 });
 
