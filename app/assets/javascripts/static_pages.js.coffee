@@ -2,7 +2,7 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
-$(document).ready ->
+$ ->
   
   playlist = $('#music').data('music')
   cssSelector =
@@ -15,5 +15,8 @@ $(document).ready ->
     solution: "html, flash"
 
   myPlaylist = new jPlayerPlaylist(cssSelector, playlist, options)
+
+  $("a:not([data-remote]):not([data-behavior]):not([data-skip-pjax])").pjax "[data-pjax-container]"
+
 
  
