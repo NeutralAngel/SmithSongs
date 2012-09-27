@@ -1,19 +1,19 @@
-<p id="notice"><%= notice %></p>
-
+<section class="event <%= "steve_show" if @event.steve_show %>">
 <p>
-  <b>Venue:</b>
-  <%= @event.venue.name %>
+  <b>Title:</b>
+  <%= @event.title %>
 </p>
 
 <p>
-  <b>Steve show:</b>
-  <%= @event.steve_show %>
+  <b>Description:</b>
+  <%= @event.description %>
 </p>
 
 <p>
   <b>Event date:</b>
   <%= @event.event_date.strftime("%_m/%-d/%Y") %>
 </p>
+<p id="notice"><%= notice %></p>
 
 <p>
   <b>Begin time:</b>
@@ -26,14 +26,11 @@
 </p>
 
 <p>
-  <b>Title:</b>
-  <%= @event.title %>
+  <b>Venue:</b>
+  <%= @event.venue.name %>
 </p>
 
-<p>
-  <b>Description:</b>
-  <%= @event.description %>
-</p>
+</section>
 
 
 <%= link_to 'Edit', edit_event_path(@event) %> |
