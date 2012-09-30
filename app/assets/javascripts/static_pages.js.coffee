@@ -24,9 +24,12 @@ $(document).ready ->
   spectrum = ->
     hue = "rgb(" + (Math.floor(Math.random() * 256)) + "," + (Math.floor(Math.random() * 256)) + "," + (Math.floor(Math.random() * 256)) + ")"
     $("body").animate(backgroundColor: hue, 1000)
+    window.setTimeout (->
+      spectrum()
+    ), 8000
     return false
   
-  window.setInterval (->
+  window.setTimeout (->
     spectrum()
   ), 8000
  
