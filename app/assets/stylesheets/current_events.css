@@ -6,17 +6,17 @@ body{
   margin:0;
   padding:0;
   background: url('tiedye320x240.png') no-repeat right top fixed;
-  -webkit-background-size: cover; 
+  /*-webkit-background-size: cover; 
   -moz-background-size: cover; 
-  -o-background-size: cover;
+  -o-background-size: cover;*/
   background-size: cover; 
 }
 
 div.latest_news_module{
   width: 234px;
   /*width: 30%;*/
-  margin-left: 25px;
-  margin-top: 10px;
+  /*margin-left: 25px;*/
+  /*margin-top: 10px;*/
   padding: 4px;
   float: left;
   background-color: white;
@@ -28,12 +28,16 @@ div.latest_news_module{
 
 
 
-div#title h3 {
+div#title p {
   font-size: 18px;
   font-style: italic;
   line-height: 20px;
   font-weight: 400;
-  display: inline;
+  display: block;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+  margin: 0px;
+  color: #3B3B3B;
 }
 
 div#title {

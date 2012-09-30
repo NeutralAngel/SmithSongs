@@ -17,6 +17,14 @@ body {
 
 div#container {
 
+  min-width: 800px;
+  max-width: 1600px;
+  border: 1px solid black;
+  overflow: hidden;
+  margin-top: 50px;
+  padding: 50px;
+  background-color: rgba(255, 255, 255, .3);
+
 }
 
 div#main {
@@ -36,6 +44,11 @@ div#main div#page {
 
 nav {
   text-align: center;
+  background-color: rgba(0,0,0,.5);
+}
+
+nav a, nav a:visited {
+  color: white;
 }
 
 nav ul {
