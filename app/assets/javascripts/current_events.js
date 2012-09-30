@@ -1,0 +1,12 @@
+$(document).ready(function(){
+  $("#latest_news_items").mbScrollable({
+    dir:"vertical",
+    width:234,
+    elementsInPage:5,
+    elementMargin:7,
+    height:230,
+    slideTimer:1000,
+    autoscroll:true,
+    scrollTimer:4000
+  });
+});

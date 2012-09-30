@@ -17,6 +17,16 @@ $ ->
   myPlaylist = new jPlayerPlaylist(cssSelector, playlist, options)
 
   $("a:not([data-remote]):not([data-behavior]):not([data-skip-pjax])").pjax "[data-pjax-container]"
+  $.pjax.defaults.timeout = 10000
 
-
+$(document).ready ->
+  spectrum = ->
+    hue = "rgb(" + (Math.floor(Math.random() * 256)) + "," + (Math.floor(Math.random() * 256)) + "," + (Math.floor(Math.random() * 256)) + ")"
+    $("body").animate
+      backgroundColor: hue
+    , 1000
+  
+  window.setInterval (->
+    spectrum()
+  ), 8000
  

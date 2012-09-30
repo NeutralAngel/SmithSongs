@@ -2,10 +2,51 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+html { 
+  overflow-y: scroll;
+}
+
 body {
-  margin: 0px;
+  // margin: 0px;
+  // height: 100%;
 }
 
 *:focus {
   outline: none;
 }
+
+div#container {
+
+}
+
+div#main {
+  display: inline-block;
+  // margin-left: 50px;
+  // width: 60%;
+}
+
+div#main div#page {
+  // margin-left: auto;
+  // margin-right: auto;
+  width: 50%;
+  margin-left: 50px;
+  position: relative;
+  
+}
+
+nav {
+  text-align: center;
+}
+
+nav ul {
+  margin-left: 0;
+  padding-left: 0;
+  display: inline;
+  } 
+
+nav ul li {
+  margin-left: 0;
+  padding: 3px 15px;
+  list-style: none;
+  display: inline;
+  }

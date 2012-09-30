@@ -1,0 +1,20 @@
+<div class="latest_news_module">
+  <div id="title">
+    <h3>Where's Steve?</h3>
+  </div>
+  <div id="latest_news_items">
+
+    <% @current_events.each do |event| %>
+    <div class="latest_news_item scrollEl">
+      <a href="<%= event_path(event.id) %>">
+        <div class="news_square_date">
+          <div class="square_month"><%= event.event_date.strftime("%b") %></div>
+          <div class="square_day"><%= event.event_date.strftime("%d") %></div>
+        </div>
+        <span class="latest_news_title"><%= event.title %></span>
+      </a>
+    </div>
+    <% end %>
+
+  </div>
+</div>

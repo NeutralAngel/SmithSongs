@@ -4,7 +4,7 @@
   <title>Smithsongs</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= stylesheet_link_tag    "jplayer.pink.flag", :media => "all" %>
-  <%= javascript_include_tag "application", "jquery.jplayer.min", "jplayer.playlist.min" %>
+  <%= javascript_include_tag "application", "jquery.jplayer.min", "jplayer.playlist.min", "mbScrollable.js", "jquery.color.js" %>
   <%= csrf_meta_tags %>
 </head>
 
@@ -13,10 +13,15 @@
   <%= render "layouts/music_player" %>
   <%= render "layouts/navigation" %>
 
-  <div id="main" data-pjax-container>
-    <%= yield %>
-  <div>
+  <div id="container">
+    <%= render "layouts/currentEvents" %>
 
+    <div id="main">
+      <div id="page" data-pjax-container>
+        <%= yield %>
+      </div>
+      </div>
+  </div>
 
 
 </body>
