@@ -1,5 +1,11 @@
 Smithsongs::Application.routes.draw do
 
+  resources :line_items
+
+  resources :carts
+
+  resources :products
+
   resources :events
 
   resources :venues
@@ -8,6 +14,8 @@ Smithsongs::Application.routes.draw do
   
   match '/home', to: 'static_pages#home'
   match '/about', to: 'static_pages#about'
+  match '/store', to: 'store#index'
+  match '/cart', to: 'carts#show'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

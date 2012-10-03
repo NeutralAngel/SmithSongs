@@ -32,4 +32,7 @@ $(document).ready ->
   window.setTimeout (->
     spectrum()
   ), 8000
+
+
+    
  

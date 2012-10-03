@@ -19,4 +19,14 @@ class ApplicationController < ActionController::Base
     @current_events = Event.where(:event_date => Time.now.to_date...(Time.now.to_date + 2.weeks)).order(:event_date)
   end
 
+  private
+
+  def current_cart
+    Cart.find(session[:cart_id])
+  rescue ActiveRecord::RecordNotFound
+    cart = Cart.create
+    session[:cart_id] = cart.id
+    cart
+  end
+
 end

@@ -22,7 +22,7 @@ div#container {
   border: 1px solid #3B3B3B;
   overflow: hidden;
   margin-top: 50px;
-  padding: 50px;
+  padding: 50px 0px 50px 50px;
   background-color: rgba(255, 255, 255, .3);
 
 }
@@ -30,16 +30,24 @@ div#container {
 div#main {
   display: inline-block;
   // margin-left: 50px;
-  // width: 60%;
+  width: 50%;
 }
 
 div#main div#page {
   // margin-left: auto;
   // margin-right: auto;
-  width: 50%;
+  //width: 50%;
   margin-left: 50px;
   position: relative;
   
+}
+
+div#main h1 {
+  margin: 0em 1em 1em 1em;
+}
+
+#store .entry form, #store .entry form div {
+  display: inline;
 }
 
 nav {
