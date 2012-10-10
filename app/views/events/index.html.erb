@@ -1,35 +1,10 @@
+<title>Events</title>
 <h1>Listing events</h1>
 
-<table>
-  <tr>
-    <th>Venue</th>
-    <th>Steve show</th>
-    <th>Event date</th>
-    <th>Begin time</th>
-    <th>End time</th>
-    <th>Title</th>
-    <th>Description</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
 <% @events.each do |event| %>
-  <tr>
-    <td><%= event.venue_id %></td>
-    <td><%= event.steve_show %></td>
-    <td><%= event.event_date %></td>
-    <td><%= event.begin_time %></td>
-    <td><%= event.end_time %></td>
-    <td><%= event.title %></td>
-    <td><%= event.description %></td>
-    <td><%= link_to 'Show', event %></td>
-    <td><%= link_to 'Edit', edit_event_path(event) %></td>
-    <td><%= link_to 'Destroy', event, method: :delete, remote: true, class: "delete_venue", data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+  <% @event = event %>
+  <%= render @event %>
 <% end %>
-</table>
 
-<br />
 
 <%= link_to 'New Event', new_event_path %>

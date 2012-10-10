@@ -11,8 +11,17 @@ body {
   // height: 100%;
 }
 
+.hidden {
+  display: none;
+}
+
 *:focus {
   outline: none;
+}
+
+#jp_container_1 img {
+  float: left;
+  margin-left: 60px;
 }
 
 div#container {
@@ -27,19 +36,20 @@ div#container {
 
 }
 
+div#sidebar {
+  overflow: hidden;
+  float: left;
+}
+
 div#main {
-  display: inline-block;
-  // margin-left: 50px;
+  // display: inline-block;
   width: 50%;
+  float: left;
 }
 
 div#main div#page {
-  // margin-left: auto;
-  // margin-right: auto;
-  //width: 50%;
   margin-left: 50px;
-  position: relative;
-  
+  // float: right;
 }
 
 div#main h1 {

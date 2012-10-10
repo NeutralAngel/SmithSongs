@@ -4,7 +4,7 @@
   <title>Smithsongs</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= stylesheet_link_tag    "jplayer.pink.flag", :media => "all" %>
-  <%= javascript_include_tag "application", "jquery.jplayer.min", "jplayer.playlist.min", "mbScrollable.js" %>
+  <%= javascript_include_tag "application", "jquery.jplayer.min", "jplayer.playlist.min", "mbScrollable.js", "jquery.backgroundSize.js" %>
   <%= csrf_meta_tags %>
 </head>
 
@@ -14,15 +14,18 @@
   <%= render "layouts/navigation" %>
 
   <div id="container">
-    <%= render "layouts/currentEvents" %>
-
+    <div id="sidebar">
+      <%= render "layouts/currentEvents" %>
+      <%= hidden_div_if(@cart.line_items.empty?, :id => "cart") do %>
+          <%= render @cart %>
+      <% end %>
+    </div>
     <div id="main">
       <div id="page" data-pjax-container>
         <%= yield %>
       </div>
     </div>
   </div>
-
 
 
 

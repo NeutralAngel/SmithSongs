@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
-  before_filter :set_music, :load_current_events
+  before_filter :set_music, :load_current_events, :load_cart
 
   def set_music
     @music_list = 
@@ -17,6 +17,10 @@ class ApplicationController < ActionController::Base
 
   def load_current_events
     @current_events = Event.where(:event_date => Time.now.to_date...(Time.now.to_date + 2.weeks)).order(:event_date)
+  end
+
+  def load_cart
+    @cart = current_cart
   end
 
   private

@@ -4,6 +4,7 @@ gem 'rails', '3.2.8'
 gem 'pjax_rails'
 gem 'thin'
 gem 'jquery-ui-rails'
+gem 'stripe'
 
 group :development, :test do
   gem 'sqlite3', '1.3.5'

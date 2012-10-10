@@ -7,4 +7,8 @@ class LineItem < ActiveRecord::Base
   def init
     self.quantity ||= 1 
   end
+
+  def total_price
+    product.price * quantity
+  end
 end
