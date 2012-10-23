@@ -16,7 +16,8 @@ class ApplicationController < ActionController::Base
   end
 
   def load_current_events
-    @current_events = Event.where(:event_date => Time.now.to_date...(Time.now.to_date + 2.weeks)).order(:event_date)
+    # Retrieve next events
+    @current_events = Event.where("event_date >= ?", Time.now.to_date).limit(10).order(:event_date)
   end
 
   def load_cart
