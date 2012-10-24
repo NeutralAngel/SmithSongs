@@ -5,13 +5,11 @@
 $ ->
   init()
 
-$(document).on "pjax:end", ->
+$(document).on "pjax:complete", ->
   init()
 
 init = ->
-  # $('#event_event_date').datepicker
-  #     dateFormat: 'yy-mm-dd'
-
+  
   $("#event_event_date").datepicker
       dateFormat: 'yy-mm-dd'
       showButtonPanel: true
@@ -22,5 +20,14 @@ init = ->
 
       onClose: (dateText, inst) ->
         @select()  unless document.all
+
+  title = $('title').text() 
+  $('title').remove()
+
+  title = "NewEvent"  if title is "New Event"
+
+  $('a').removeClass('active')
+  
+  $("#" + title).addClass "active"
 
 

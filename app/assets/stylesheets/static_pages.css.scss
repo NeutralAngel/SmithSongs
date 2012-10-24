@@ -69,6 +69,15 @@ nav a, nav a:visited {
   color: white;
 }
 
+nav a:hover {
+  background-color: rgba(0,0,0,.5);
+  font-size: 1.4em;
+}
+
+nav a.active {
+  font-size: 1.4em;
+}
+
 nav ul {
   margin-left: 0;
   padding-left: 0;
