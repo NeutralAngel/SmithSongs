@@ -16,49 +16,59 @@
     <%= f.text_field :name, :size => 40 %>
   </div>
   <div class="field">
-    <%= f.label :ship_line1 %><br />
-    <%= f.text_field :ship_line1, :size => 40 %>
+    <%= f.label :email %><br />
+    <%= f.text_field :email, :size => 40 %>
   </div>
-  <div class="field">
-    <%= f.label :ship_line2 %><br />
-    <%= f.text_field :ship_line2, :size => 40 %>
-  </div>
-  <div class="field">
-    <%= f.label :ship_city %><br />
-    <%= f.text_field :ship_city, :size => 40 %>
-  </div>
-  <div class="field">
-    <%= f.label :ship_state %><br />
-    <%= f.text_field :ship_state, :size => 40 %>
-  </div>
-  <div class="field">
-    <%= f.label :ship_zip %><br />
-    <%= f.text_field :ship_zip, :size => 40 %>
-  </div>
+  <fieldset>
+    <legend>Shipping Details</legend>
+    <div class="field">
+      <%= f.label :ship_line1, "Address Line One" %><br />
+      <%= f.text_field :ship_line1, :size => 40 %>
+    </div>
+    <div class="field">
+      <%= f.label :ship_line2, "Address Line Two" %><br />
+      <%= f.text_field :ship_line2, :size => 40 %>
+    </div>
+    <div class="field">
+      <%= f.label :ship_city, "City" %><br />
+      <%= f.text_field :ship_city, :size => 40 %>
+    </div>
+    <div class="field">
+      <%= f.label :ship_state, "State" %><br />
+      <%= f.text_field :ship_state, :size => 40 %>
+    </div>
+    <div class="field">
+      <%= f.label :ship_zip, "Zip Code" %><br />
+      <%= f.text_field :ship_zip, :size => 40 %>
+    </div>
+  </fieldset>
 
   <%= f.hidden_field :stripe_card_token %>
 
-  <% if @order.stripe_card_token.present? %>
-    Credit card has been provided.
-  <% else %>
-    <div class="field">
-      <%= label_tag :card_name, "Name On Card" %>
-      <%= text_field_tag :card_name, nil, name: nil, :size => 40 %>
-    </div>
-    <div class="field">
-      <%= label_tag :card_number, "Credit Card Number" %>
-      <%= text_field_tag :card_number, nil, name: nil %>
-    </div>
-    <div class="field">
-      <%= label_tag :card_code, "Security Code on Card (CVV)" %>
-      <%= text_field_tag :card_code, nil, name: nil %>
-    </div>
-    <div class="field">
-      <%= label_tag :card_month, "Card Expiration" %>
-      <%= select_month nil, {add_month_numbers: true}, {name: nil, id: "card_month"} %>
-      <%= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+15}, {name: nil, id: "card_year"} %>
-    </div>
-  <% end %>
+  <fieldset>
+    <legend>Credit Card Details</legend>
+    <% if @order.stripe_card_token.present? %>
+      Credit card has been provided.
+    <% else %>
+      <div class="field">
+        <%= label_tag :card_name, "Name On Card" %>
+        <%= text_field_tag :card_name, nil, name: nil, :size => 40 %>
+      </div>
+      <div class="field">
+        <%= label_tag :card_number, "Credit Card Number" %>
+        <%= text_field_tag :card_number, nil, name: nil %>
+      </div>
+      <div class="field">
+        <%= label_tag :card_code, "Security Code on Card (CVV)" %>
+        <%= text_field_tag :card_code, nil, name: nil %>
+      </div>
+      <div class="field">
+        <%= label_tag :card_month, "Card Expiration" %>
+        <%= select_month nil, {add_month_numbers: true}, {name: nil, id: "card_month"} %>
+        <%= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+15}, {name: nil, id: "card_year"} %>
+      </div>
+    <% end %>
+  </fieldset>
 
   <div class="actions">
     <%= f.submit 'Place Order' %>

@@ -1,8 +1,8 @@
 class Order < ActiveRecord::Base
   has_many :line_items, :dependent => :destroy
-  attr_accessible :name, :stripe_token, :stripe_card_token,
+  attr_accessible :name, :email, :stripe_token, :stripe_card_token,
                   :ship_line1, :ship_line2, :ship_city, :ship_state, :ship_zip
-  validates :name, :ship_line1, :ship_city, :ship_state, :ship_zip, :presence => true
+  validates :name, :email, :ship_line1, :ship_city, :ship_state, :ship_zip, :presence => true
   attr_accessor :stripe_card_token
 
   def add_line_items_from_cart(cart)

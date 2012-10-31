@@ -1,0 +1,20 @@
+<%= @order.name %>,
+
+Thank you so much for your order of:
+
+<% @order.line_items.each do |line_item| %>
+<%=  line_item.quantity %>  x <%= line_item.product.title %>
+Total: <%= number_to_currency(line_item.total_price) %>
+<% end %>
+
+Your  order will be shipped to you at:
+
+<%= @order.ship_line1 %> 
+<% if @order.ship_line2.length > 0 %>
+<%= @order.ship_line2 %>
+<% end %>
+<%= @order.ship_city %>, <%= @order.ship_state %>
+<%= @order.ship_zip %>
+
+Thanks,
+Steve Smith
