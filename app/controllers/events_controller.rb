@@ -40,6 +40,7 @@ class EventsController < ApplicationController
   # POST /events
   # POST /events.json
   def create
+    set_times
     @event = Event.new(params[:event])
 
     respond_to do |format|
@@ -58,6 +59,7 @@ class EventsController < ApplicationController
   # PUT /events/1
   # PUT /events/1.json
   def update
+    set_times
     @event = Event.find(params[:id])
 
     respond_to do |format|
@@ -85,4 +87,27 @@ class EventsController < ApplicationController
       format.js
     end
   end
+
+  private
+
+    def set_times
+      begin_hour = params[:event]['begin_time(4i)']
+      end_hour = params[:event]['end_time(4i)']
+      begin_date = Date.parse(params[:event]['event_date'])
+
+      params[:event]['begin_time(1i)'] = begin_date.year.to_s
+      params[:event]['begin_time(2i)'] = begin_date.month.to_s
+      params[:event]['begin_time(3i)'] = begin_date.mday.to_s
+
+      if begin_hour <= end_hour
+        end_date = begin_date
+      else
+        end_date = begin_date.next
+      end
+
+      params[:event]['end_time(1i)'] = end_date.year.to_s
+      params[:event]['end_time(2i)'] = end_date.month.to_s
+      params[:event]['end_time(3i)'] = end_date.mday.to_s
+    end
+
 end
