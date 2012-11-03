@@ -6,30 +6,17 @@
 </p>
 
 <p>
-  <b>Line1:</b>
+  <b>Address:</b>
+  <span id="address">
   <%= @venue.line1 %>
-</p>
-
-<p>
-  <b>Line2:</b>
+<% if @venue.line2 %>
   <%= @venue.line2 %>
+<% end %>
+  <%= @venue.city %>, <%= @venue.state %> <%= @venue.zip%>
+  </span>
 </p>
 
-<p>
-  <b>City:</b>
-  <%= @venue.city %>
-</p>
-
-<p>
-  <b>State:</b>
-  <%= @venue.state %>
-</p>
-
-<p>
-  <b>Zip:</b>
-  <%= @venue.zip %>
-</p>
-
+<div id="map_canvas" style="width:400px; height:400px"></div>
 
 <%= link_to 'Edit', edit_venue_path(@venue) %> |
 <%= link_to 'Back', venues_path %>
