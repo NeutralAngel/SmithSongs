@@ -5,6 +5,8 @@ gem 'pjax_rails'
 gem 'thin'
 gem 'jquery-ui-rails'
 gem 'stripe'
+gem 'activeadmin'
+gem 'meta_search', '>= 1.1.0.pre'
 
 group :development, :test do
   gem 'sqlite3', '1.3.5'
