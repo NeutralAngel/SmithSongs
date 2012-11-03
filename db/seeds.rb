@@ -11,6 +11,7 @@ Event.delete_all
 Product.delete_all
 Order.destroy_all
 Cart.destroy_all
+AdminUser.destroy_all
 
 if Rails.env.development?
   ActiveRecord::Base.connection.execute("delete from sqlite_sequence where name='events';")
@@ -18,6 +19,7 @@ if Rails.env.development?
   ActiveRecord::Base.connection.execute("delete from sqlite_sequence where name='products';")
   ActiveRecord::Base.connection.execute("delete from sqlite_sequence where name='orders';")
   ActiveRecord::Base.connection.execute("delete from sqlite_sequence where name='carts';")
+  ActiveRecord::Base.connection.execute("delete from sqlite_sequence where name='admin_user';")
 
   Venue.create( name: 'McGillvery\'s' )
   Venue.create( name: 'Nathan\'s Bar' )
@@ -134,6 +136,8 @@ if Rails.env.development?
                   description: 'Steve\'s first full-length album.',
                   image_url:   'start_today275x269.jpg',
                   price:       14.99)
+
+  AdminUser.create!(:email => 'admin@example.com', :password => 'password', :password_confirmation => 'password')
 end
 
 if Rails.env.production?

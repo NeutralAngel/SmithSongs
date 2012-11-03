@@ -55,8 +55,8 @@ ActiveRecord::Schema.define(:version => 20121031225935) do
     t.integer  "venue_id"
     t.boolean  "steve_show"
     t.date     "event_date"
-    t.datetime "begin_time"
-    t.datetime "end_time"
+    t.time     "begin_time"
+    t.time      "end_time"
     t.text     "title"
     t.text     "description"
     t.datetime "created_at",  :null => false

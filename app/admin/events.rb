@@ -4,8 +4,8 @@ ActiveAdmin.register Event do
   form do |f| 
     f.inputs "Whatever" do
       f.input :venue
-      f.input :event_date, :as=> :date_select
-      f.input :begin_time, :as => :time_select, :ignore_date => false
+      f.input :event_date, :as => :date_picker
+      f.input :begin_time, :as => :time_select, :year => Time.now.year, :month => Time.now.month, :day => Time.now.day
       f.input :end_time
       f.input :title
       f.input :description
