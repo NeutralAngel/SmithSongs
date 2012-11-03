@@ -7,7 +7,7 @@
   <%= javascript_include_tag "application", "jquery.jplayer.min", "jplayer.playlist.min", "mbScrollable.js", "jquery.backgroundSize.js" %>
   <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=AIzaSyAk9XtINmxyf6Rnvwe_ynWuR9-VR4XSAaE&sensor=false" %>
   <%= csrf_meta_tags %>
-  <%= tag :meta, :name => "stripe-key", :content => STRIPE_PUBLIC_KEY %>
+  <%= tag :meta, :name => "stripe-key", :content => ENV['STRIPE_PUBLIC_KEY'] %>
 </head>
 
 <body>
