@@ -16,5 +16,4 @@
 .env
 
 # Ignore Stripe Initializer
-/config/initializers/stripe.rb
 /config/initializers/setup_mail.rb
