@@ -14,7 +14,12 @@ function initialize() {
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
 
-  var address = document.getElementById("address").innerHTML;
+  var address;
+  var addressElement = document.getElementById("address");
+  if (addressElement) {
+    address = addressElement.innerHTML;
+
+  //var address = document.getElementById("address").innerHTML;
   var geocoder = new google.maps.Geocoder();
   var map = new google.maps.Map(document.getElementById("map_canvas"),
     mapOptions);
@@ -34,7 +39,7 @@ function initialize() {
   map = new google.maps.Map(document.getElementById("map_canvas"),
     mapOptions);
 
-  };
+  }};
 
 
 $(document).on("pjax:complete", function() {
