@@ -1,9 +1,14 @@
-<h1>Listing orders</h1>
+<title>Orders</title>
 
 <table>
   <tr>
     <th>Name</th>
-    <th>Address</th>
+    <th>Email</th>
+    <th>Address Line 1</th>
+    <th>Address Line 2</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zip</th>
     <th>Stripe token</th>
     <th></th>
     <th></th>
@@ -13,7 +18,12 @@
 <% @orders.each do |order| %>
   <tr>
     <td><%= order.name %></td>
-    <td><%= order.address %></td>
+    <td><%= order.email %></td>
+    <td><%= order.ship_line1 %></td>
+    <td><%= order.ship_line2 %></td>
+    <td><%= order.ship_city %></td>
+    <td><%= order.ship_state %></td>
+    <td><%= order.ship_zip %></td>
     <td><%= order.stripe_token %></td>
     <td><%= link_to 'Show', order %></td>
     <td><%= link_to 'Edit', edit_order_path(order) %></td>
