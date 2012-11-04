@@ -6,6 +6,16 @@ section.event{
   border:2px solid black; 
   padding: 20px;
   margin-bottom: 10px;
+  overflow: hidden;
+}
+
+#venue_side {
+  
+}
+#event_side {
+  width: 40%;
+  float: left;
+  padding: 0px 25px 0px 0px;
 }
 
 #events .calendar {
