@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.8'
-gem 'pjax_rails'
+gem 'pjax_rails', '0.3.2'
 gem 'thin'
 gem 'jquery-ui-rails'
 gem 'stripe'
