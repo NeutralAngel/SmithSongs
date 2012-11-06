@@ -1,12 +1,11 @@
+<div id="venue">
 <p id="notice"><%= notice %></p>
-
+<div id="map_canvas"></div>
 <p>
-  <b>Venue Name:</b>
-  <%= @venue.name %>
+  <h3><%= @venue.name %></h3>
 </p>
-
 <p>
-  <b>Address:</b>
+  
   <span id="address">
   <%= @venue.line1 %>
 <% if @venue.line2 %>
@@ -15,6 +14,7 @@
   <%= @venue.city %>, <%= @venue.state %> <%= @venue.zip%>
   </span>
 </p>
+</div>
 
-<div id="map_canvas" style="width:400px; height:400px"></div>
+
 

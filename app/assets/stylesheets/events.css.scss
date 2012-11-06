@@ -7,10 +7,20 @@ section.event{
   padding: 20px;
   margin-bottom: 10px;
   overflow: hidden;
+  background-color: rgba(255, 255, 255, .3);
 }
 
-#venue_side {
-  
+#venue {
+  overflow: hidden;
+}
+
+#event_time h1 {
+  margin: 0px;
+  font-size: 2em;
+}
+
+#event_time span {
+  font-size: 1em;
 }
 
 #events {
@@ -69,4 +79,18 @@ section.event{
   font-size: 11px;
   padding-left: 20px;
   list-style-type: none;
+}
+
+#map_canvas {
+  width:350px; 
+  height:350px;
+  border: 1px solid black;
+}
+
+#event_description {
+  margin-top: 35px;
+}
+
+#event_description h1 {
+  font-size: 2em;
 }

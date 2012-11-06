@@ -1,32 +1,24 @@
 <section class="event <%= "steve_show" if @event.steve_show %>">
 
 <div id="event_side">
-<p>
-  <b>Title:</b>
-  <%= @event.title %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @event.description %>
-</p>
-
-<p>
-  <b>Event date:</b>
-  <%= @event.event_date.strftime("%_m/%-d/%Y") %>
-</p>
 <p id="notice"><%= notice %></p>
 
+<div id="event_time">
+<h1><%= @event.event_date.strftime("%A, %B %e") %></h1>
+<span><%= @event.begin_time.strftime("%l:%M %p") %>-<%= @event.end_time.strftime("%l:%M %p") %></span>
+</div>
+
+<div id="event_description">
 <p>
-  <b>Begin time:</b>
-  <%= @event.begin_time.strftime("%l:%M %p") %>
+<h1><%= @event.title %></h1>
 </p>
 
 <p>
-  <b>End time:</b>
-  <%= @event.end_time.strftime("%l:%M %p") %>
+<h2><%= @event.description.html_safe %></h2>
 </p>
+
 <%= link_to 'Edit', edit_event_path(@event) %> | <%= link_to 'Destroy', @event, method: :delete, remote: true, class: "delete_event", data: { confirm: 'Are you sure?' } %>
+</div>
 </div>
 <% @venue = @event.venue %>
 <div id="venue_side">
