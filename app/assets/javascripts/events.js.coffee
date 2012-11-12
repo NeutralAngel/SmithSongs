@@ -30,4 +30,15 @@ init = ->
   
   $("#" + title).addClass "active"
 
+  # $("#makeMeScrollable").smoothDivScroll("destroy");
+
+  $("#makeMeScrollable").smoothDivScroll
+    mousewheelScrolling: "allDirections"
+    manualContinuousScrolling: true
+    autoScrollingMode: "onStart"
+
+  $("#makeMeScrollable").smoothDivScroll("resetEverything");
+
+
+
 

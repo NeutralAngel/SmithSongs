@@ -1,2 +1,7 @@
 <title>Home</title>
-<h1>home<h2>
+<div id="makeMeScrollable">
+  <%= link_to image_tag("start_today391x380.jpg", width: 391, :alt => 'Start Today', :id => 'StartToday'), '/store', :id => 'Store' %>
+  <%= link_to image_tag("egyptian_calendar390x380.jpg", width: 390, :alt => 'Calendar', :id => 'calendar'), events_path, :id => 'Events' %>
+  <%= image_tag("possible_start_today360x380.jpg", width: 360, :alt => 'Old Start Today', :id => 'OldStartToday') %>
+  <%= image_tag("steve_photos353x380.jpg", width: 353, :alt => 'Photos', :id => 'photos') %>
+</div>
