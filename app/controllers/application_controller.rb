@@ -6,12 +6,15 @@ class ApplicationController < ActionController::Base
   def set_music
     @music_list = 
       [ 
-      { title: "Cro Magnon Man", 
-        mp3:"http://www.jplayer.org/audio/mp3/TSP-01-Cro_magnon_man.mp3"
+      { title: "Start Today", 
+        mp3:"https://s3.amazonaws.com/SmithSongsNN/music/StartToday.mp3"
       },
       {
-        title: "Your Face",
-        mp3: "http://www.jplayer.org/audio/mp3/TSP-05-Your_face.mp3"
+        title: "Clark Whiteleather",
+        mp3: "https://s3.amazonaws.com/SmithSongsNN/music/ClarkWhiteleather.mp3"
+      },
+      { title: "Think Up", 
+        mp3:"https://s3.amazonaws.com/SmithSongsNN/music/ThinkUp.mp3"
       }]
   end
 
