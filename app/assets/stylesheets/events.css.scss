@@ -17,6 +17,8 @@ section.event{
 #event_time h1 {
   margin: 0px;
   font-size: 2em;
+  font-family: 'Droid Sans', sans-serif;
+  font-weight: bold;
 }
 
 #event_time span {
@@ -88,9 +90,15 @@ section.event{
 }
 
 #event_description {
-  margin-top: 35px;
+  font-family: 'Droid Sans', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
 }
 
 #event_description h1 {
-  font-size: 2em;
+  font-size: 26px;
+  font-family: 'Lobster', cursive;
+  font-style: normal;
+  font-weight: normal;
+  margin-bottom: 5px;
 }
