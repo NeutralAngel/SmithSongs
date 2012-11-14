@@ -1,4 +1,5 @@
 class OrdersController < ApplicationController
+  force_ssl
   # GET /orders
   # GET /orders.json
   def index

@@ -11,7 +11,7 @@
 <div id="event_description">
 <p>
 <h1><%= @event.title %></h1>
-<%= @event.description.html_safe %><
+<%= @event.description.html_safe %>
 </p>
 
 <%= link_to 'Edit', edit_event_path(@event) %> | <%= link_to 'Destroy', @event, method: :delete, remote: true, class: "delete_event", data: { confirm: 'Are you sure?' } %>
