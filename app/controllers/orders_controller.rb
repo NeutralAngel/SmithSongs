@@ -36,6 +36,7 @@ class OrdersController < ApplicationController
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @order }
+      format.js
     end
   end
 
