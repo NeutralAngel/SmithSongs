@@ -11,41 +11,44 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name, :size => 40 %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email, :size => 40 %>
-  </div>
-  <fieldset>
+  <fieldset id="who_details">
+    <legend>Contact Details</legend>
+    <div class="field">
+      <%= f.label :name %>
+      <%= f.text_field :name, :size => 40 %>
+    </div>
+    <div class="field">
+      <%= f.label :email %>
+      <%= f.text_field :email, :size => 40 %>
+    </div>
+  </fieldset>
+  <fieldset id="shipping_details">
     <legend>Shipping Details</legend>
     <div class="field">
-      <%= f.label :ship_line1, "Address Line One" %><br />
+      <%= f.label :ship_line1, "Address Line One" %>
       <%= f.text_field :ship_line1, :size => 40 %>
     </div>
     <div class="field">
-      <%= f.label :ship_line2, "Address Line Two" %><br />
+      <%= f.label :ship_line2, "Address Line Two" %>
       <%= f.text_field :ship_line2, :size => 40 %>
     </div>
     <div class="field">
-      <%= f.label :ship_city, "City" %><br />
+      <%= f.label :ship_city, "City" %>
       <%= f.text_field :ship_city, :size => 40 %>
     </div>
     <div class="field">
-      <%= f.label :ship_state, "State" %><br />
+      <%= f.label :ship_state, "State" %>
       <%= f.text_field :ship_state, :size => 40 %>
     </div>
     <div class="field">
-      <%= f.label :ship_zip, "Zip Code" %><br />
+      <%= f.label :ship_zip, "Zip Code" %>
       <%= f.text_field :ship_zip, :size => 40 %>
     </div>
   </fieldset>
 
   <%= f.hidden_field :stripe_card_token %>
 
-  <fieldset>
+  <fieldset id="cc_details">
     <legend>Credit Card Details</legend>
     <% if @order.stripe_card_token.present? %>
       Credit card has been provided.
@@ -71,7 +74,7 @@
   </fieldset>
 
   <div class="actions">
-    <%= f.submit 'Place Order' %>
+    <%= f.submit 'Place Order', :class => 'checkout_buttons', :id => 'order_button' %>
   </div>
   <div id="stripe_error">
     <noscript>JavaScript is not enabled and is required for this form. First enable it in your web browser settings.</noscript>

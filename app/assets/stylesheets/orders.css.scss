@@ -1,3 +1,70 @@
 // Place all the styles related to the orders controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.smithsongs_form {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 9px; 
+  -moz-border-radius: 9px; 
+  -webkit-border-radius: 9px; 
+  border: 1px solid  #CCC;
+  width: 500px;
+}
+
+.smithsongs_form fieldset {
+  border: none;
+}
+
+.smithsongs_form fieldset input{
+  font-size:12px;
+  padding:4px 2px;
+  border:solid 1px #aacfe4;
+  width:200px;
+  margin:2px 0 10px 10px;
+}
+
+#card_month {
+  margin:2px 0 10px 10px;
+}
+
+.smithsongs_form fieldset label{
+  display:block;
+  text-align:right;
+  width:140px;
+  float:left;
+  font-family: 'Droid Sans', sans-serif;
+  font-size: 14px;
+}
+
+.smithsongs_form legend {
+  font-size: 26px;
+  padding-bottom: 10px;
+  font-family: 'Lobster', arial, helvetica, sans-serif;
+}
+
+#cc_details {
+  font-weight: normal;
+}
+
+#who_details {
+  font-weight: normal;
+}
+
+#shipping_details {
+  font-weight: normal;
+}
+
+.actions input{
+  font-weight: normal;
+}
+
+#new_order {
+  font-weight: normal;
+}
+
+#order_button {
+  margin-left: 160px;
+}
+
+
