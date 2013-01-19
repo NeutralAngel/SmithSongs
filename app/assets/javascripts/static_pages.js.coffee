@@ -18,6 +18,7 @@ $ ->
   
   $("a:not([data-remote]):not([data-behavior]):not([data-skip-pjax])").pjax "[data-pjax-container]", timeout: 10000
   $("body").css "background-size", "cover"
+  $("#gallery a").photobox()
 
 
 $(document).ready ->
@@ -32,6 +33,8 @@ $(document).ready ->
   window.setTimeout (->
     spectrum()
   ), 8000
+
+
 
 
 

@@ -19,9 +19,23 @@ if Rails.env.development?
   ActiveRecord::Base.connection.execute("delete from sqlite_sequence where name='orders';")
   ActiveRecord::Base.connection.execute("delete from sqlite_sequence where name='carts';")
 
-  Venue.create( name: 'McGillvery\'s' )
-  Venue.create( name: 'Nathan\'s Bar' )
-  Venue.create( name: 'Colorado Steakhouse' )
+  Venue.create( name: 'McGillvery\'s',
+                line1: '8315 US 31 S.',
+                city: 'Indianapolis',
+                state: 'IN',
+                zip: '46227' )
+
+  Venue.create( name: 'Nathan\'s Bar',
+                line1: '5389 Evanston Ave.',
+                city: 'Indianapolis',
+                state: 'IN',
+                zip: '46220' )
+
+  Venue.create( name: 'Colorado Steakhouse',
+                line1: '7940 US 31 S.',
+                city: 'Indianapolis',
+                state: 'IN',
+                zip: '46227' )
 
   Event.create( begin_time:  '2013-10-31 05:00:00',
                 end_time:    '2013-10-31 11:00:00', 

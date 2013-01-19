@@ -3,8 +3,11 @@
   <ul>
     <li><%= link_to 'Home', '/home', :id => 'Home' %></li>
     <li><%= link_to 'About', '/about', :id => 'About' %></li>
+    <li><%= link_to 'Photos', '/photos', :id => 'Photos' %></li>
     <li><%= link_to 'Calendar', events_path, :id => 'Events' %></li>
-    <li><%= link_to 'Venues', venues_path, :id => 'Venues' %></li>
-    <li><%= link_to 'New Event', new_event_path, :id => 'NewEvent' %></li>
+    <% if admin? %>
+      <li><%= link_to 'Venues', venues_path, :id => 'Venues' %></li>
+      <li><%= link_to 'New Event', new_event_path, :id => 'NewEvent' %></li>
+    <% end %>
   </ul>
 </nav>

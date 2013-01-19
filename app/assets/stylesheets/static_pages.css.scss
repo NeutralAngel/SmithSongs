@@ -26,7 +26,7 @@ body {
 
 div#container {
 
-  min-width: 800px;
+  min-width: 600px;
   max-width: 1800px;
   border: 1px solid #3B3B3B;
   overflow: hidden;
@@ -43,13 +43,14 @@ div#sidebar {
 
 div#main {
   // display: inline-block;
-  width: 70%;
+  width: 65%;
   float: left;
 }
 
 div#main div#page {
   margin-left: 50px;
   // float: right;
+  width: 100%;
 }
 
 div#main h1 {
@@ -125,3 +126,10 @@ nav ul li {
   color: transparent;
   font-family: 'Droid Sans';
 }
+
+
+  #gallery > a{ margin:1px; display:inline-block; xbackground:#F1F1F1; width:75px; height:75px; position:relative; vertical-align:bottom; 
+          transition:.1s; -webkit-transition:0.1s; perspective:100px; -webkit-perspective:100px; }
+  #gallery > a img{ -webkit-transform:rotateX(90deg); transform:rotateX(90deg); transition:.4s ease-out; -webkit-transition:0.4s ease-out; }
+  #gallery > a.loaded img{ -webkit-transform:rotateX(0deg); transform:rotateX(0deg); }
+    #gallery > a.loaded:hover{ transform:scale(1.5); -webkit-transform:scale(1.5); box-shadow:0 0 0 3px #FFF, 0 0 20px 5px #000; z-index:2; }

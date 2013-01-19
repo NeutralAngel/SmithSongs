@@ -1,4 +1,7 @@
 class VenuesController < ApplicationController
+
+  before_filter :authorize
+
   # GET /venues
   # GET /venues.json
   def index

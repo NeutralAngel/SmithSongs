@@ -12,12 +12,18 @@ Smithsongs::Application.routes.draw do
 
   resources :venues
 
+  resources :sessions
+
   root to: 'static_pages#home'
   
   match '/home', to: 'static_pages#home'
   match '/about', to: 'static_pages#about'
+  match '/photos', to: 'static_pages#photos'
   match '/store', to: 'store#index'
   match '/cart', to: 'carts#show'
+  match '/login', to: 'sessions#new'
+  match '/logout', to: 'sessions#destroy'
+  
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

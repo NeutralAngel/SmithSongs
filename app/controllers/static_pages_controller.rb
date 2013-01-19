@@ -5,5 +5,8 @@ class StaticPagesController < ApplicationController
 
   def about
   end
+
+  def photos
+  end
   
 end

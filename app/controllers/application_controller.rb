@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
+  helper_method :admin?
 
   before_filter :set_music, :load_current_events, :load_cart
 
@@ -29,12 +30,24 @@ class ApplicationController < ActionController::Base
 
   private
 
-  def current_cart
-    Cart.find(session[:cart_id])
-  rescue ActiveRecord::RecordNotFound
-    cart = Cart.create
-    session[:cart_id] = cart.id
-    cart
-  end
+    def current_cart
+      Cart.find(session[:cart_id])
+    rescue ActiveRecord::RecordNotFound
+      cart = Cart.create
+      session[:cart_id] = cart.id
+      cart
+    end
+
+    def admin?
+      (session[:password] == ADMIN_PASSWORD) && (session[:user_name] == ADMIN_USERNAME)
+    end
+
+    def authorize
+      unless admin?
+        flash[:error] = "unauthorized access"
+        redirect_to home_path
+        false
+      end
+    end
 
 end
