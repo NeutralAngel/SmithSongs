@@ -14,7 +14,7 @@
 //= require jquery_ujs
 //= require jquery.pjax
 //= require jquery.ui.datepicker
-//= require jquery.effects.all
+//= require jquery.ui.effect.all
 //= require_tree .
 
 
