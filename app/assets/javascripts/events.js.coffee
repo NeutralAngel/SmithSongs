@@ -36,7 +36,7 @@ init = ->
     mousewheelScrolling: "allDirections"
     manualContinuousScrolling: true
     autoScrollingMode: "onStart"
-    touchscrolling: true
+    touchScrolling: true
 
   $("#makeMeScrollable").smoothDivScroll("resetEverything");
 
