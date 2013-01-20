@@ -133,3 +133,9 @@ nav ul li {
   #gallery > a img{ -webkit-transform:rotateX(90deg); transform:rotateX(90deg); transition:.4s ease-out; -webkit-transition:0.4s ease-out; }
   #gallery > a.loaded img{ -webkit-transform:rotateX(0deg); transform:rotateX(0deg); }
     #gallery > a.loaded:hover{ transform:scale(1.5); -webkit-transform:scale(1.5); box-shadow:0 0 0 3px #FFF, 0 0 20px 5px #000; z-index:2; }
+
+.flashContainer{
+    border:1px solid #fff;
+    margin:0px 40px 40px 40px;
+    outline:1px solid #aaa;
+}
