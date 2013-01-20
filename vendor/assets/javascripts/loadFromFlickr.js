@@ -1,6 +1,7 @@
 !(function(){
     'use strict';
     // Get some photos from Flickr for the demo
+    $('div.pbThumbs').remove();
     $.ajax({
         url: 'http://api.flickr.com/services/rest/',
         data: {
@@ -33,6 +34,7 @@
         });
     
     // finally, initialize photobox on all retrieved images
-    $('#gallery').find('a').photobox({ thumbs:true });
+    $('#gallery').find('a').photobox({ thumbs: false });
+
     });
 })();

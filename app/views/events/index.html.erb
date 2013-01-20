@@ -19,5 +19,6 @@
   <% end %>
 </div>
 
-
-<%= link_to 'New Event', new_event_path %>
+<% if admin? %>
+  <%= link_to 'New Event', new_event_path %>
+<% end %>

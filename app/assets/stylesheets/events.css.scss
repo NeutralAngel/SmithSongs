@@ -73,9 +73,14 @@ section.event{
   a {
     text-decoration: none;
     padding: 0 10px;
-    color: #999;
+    color: #585858 ;
   }
 }
+
+#events #month a:hover {
+    color: white;
+    background-color: transparent;
+  }
 
 #events ul {
   font-size: 11px;
