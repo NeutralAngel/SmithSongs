@@ -46,7 +46,7 @@ Smithsongs::Application.configure do
   # config.action_controller.asset_host = "http://assets.example.com"
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
-  config.assets.precompile += %w( jplayer.pink.flag.css jplayer.playlist.min.js jquery.jplayer.min.js mbScrollable.js jquery.backgroundSize.js jquery-ui-1.8.23.custom.min.js jquery.kinetic.js jquery.mousewheel.min.js smooth-div-scroll-edit.min.js smoothDivScroll.css photobox.css photobox.ie.css photobox.min.js loadFromFlickr.js videos.js youTubeEmbed-jquery-1.0.js youTubeEmbed-jquery-1.0.css jquery.swfobject.1-1-1.min.js)
+  config.assets.precompile += %w( jplayer.pink.flag.css jplayer.playlist.min.js jquery.jplayer.min.js mbScrollable.js jquery.backgroundSize.js jquery-ui-1.8.23.custom.min.js jquery.kinetic.js jquery.mousewheel.min.js smooth-div-scroll-edit.min.js smoothDivScroll.css photobox.css photobox.ie.css photobox.min.js loadFromFlickr.js)
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
