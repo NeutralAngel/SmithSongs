@@ -150,13 +150,13 @@ nav ul li {
     outline:1px solid #aaa;
 }
 
-#album p{
+#album p, #about p{
   font-family: 'Droid Sans', sans-serif;
   font-size: 16px;
   font-weight: normal;
 }
 
-#album h1 {
+#album h1, #about h1 {
   font-size: 26px;
   font-family: 'Lobster', arial, helvetica, sans-serif;
   font-style: normal;
@@ -183,4 +183,23 @@ nav ul li {
 
 #social img {
   padding-left: 10px;
+}
+
+#social {
+  padding: 40px 0 0 6px;
+  float: left;
+}
+
+#about {
+  width: 40%;
+  line-height: 2;
+  float: left;
+  padding-left: 40px;
+  min-height: 300px;
+}
+
+#cdbaby {
+  float: left;
+  padding: 20px 0 0 20px;
+  width: 50%;
 }

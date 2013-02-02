@@ -16,7 +16,44 @@ class ApplicationController < ActionController::Base
       },
       { title: "Think Up", 
         mp3:"https://s3.amazonaws.com/SmithSongsNN/music/ThinkUp.mp3"
-      }]
+      },
+      { title: "Bad Seed", 
+        mp3:"https://s3.amazonaws.com/SmithSongsNN/music/BadSeed.mp3"
+      },
+      { title: "Further Forever", 
+        mp3:"https://s3.amazonaws.com/SmithSongsNN/music/FurtherForever.mp3"
+      },
+      { title: "Ghost of Tuesday", 
+        mp3:"https://s3.amazonaws.com/SmithSongsNN/music/GhostOfTuesday.mp3"
+      },
+      { title: "High Water", 
+        mp3:"https://s3.amazonaws.com/SmithSongsNN/music/HighWater.mp3"
+      },
+      { title: "Going to the Well", 
+        mp3:"https://s3.amazonaws.com/SmithSongsNN/music/GoingToTheWell.mp3"
+      },
+      { title: "Golden State", 
+        mp3:"https://s3.amazonaws.com/SmithSongsNN/music/GoldenState.mp3"
+      },
+      { title: "Summers Warm", 
+        mp3:"https://s3.amazonaws.com/SmithSongsNN/music/SummersWarm.mp3"
+      },
+      { title: "I Believe", 
+        mp3:"https://s3.amazonaws.com/SmithSongsNN/music/IBelieve.mp3"
+      },
+     { title: "Be Here Now", 
+        mp3:"https://s3.amazonaws.com/SmithSongsNN/music/BeHereNow.mp3"
+      },
+     { title: "No Good Reason", 
+        mp3:"https://s3.amazonaws.com/SmithSongsNN/music/NoGoodReason.mp3"
+      },
+     { title: "Vollrath", 
+        mp3:"https://s3.amazonaws.com/SmithSongsNN/music/Vollrath.mp3"
+      },
+      { title: "Gasoline > Golden State", 
+        mp3:"https://s3.amazonaws.com/SmithSongsNN/music/GasolineGoldenState.mp3"
+      }
+    ]
   end
 
   def load_current_events
