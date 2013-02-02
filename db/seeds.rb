@@ -6,13 +6,14 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Venue.delete_all
-Event.delete_all
-Product.delete_all
-Order.destroy_all
-Cart.destroy_all
+
 
 if Rails.env.development?
+  Venue.delete_all
+  Event.delete_all
+  Product.delete_all
+  Order.destroy_all
+  Cart.destroy_all
   ActiveRecord::Base.connection.execute("delete from sqlite_sequence where name='events';")
   ActiveRecord::Base.connection.execute("delete from sqlite_sequence where name='venues';")
   ActiveRecord::Base.connection.execute("delete from sqlite_sequence where name='products';")
@@ -151,6 +152,9 @@ if Rails.env.development?
 end
 
 if Rails.env.production?
-  # ...
+  ActiveRecord::Base.connection.execute("delete from sqlite_sequence where name='events';")
+  ActiveRecord::Base.connection.execute("delete from sqlite_sequence where name='venues';")
+  Venue.delete_all
+  Event.delete_all
 end
 
