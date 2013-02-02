@@ -11,5 +11,8 @@ class StaticPagesController < ApplicationController
 
   def videos
   end
+
+  def album
+  end
   
 end

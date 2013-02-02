@@ -91,8 +91,8 @@
     });
     
     // generate gallery thumbnails
-    if( defaults.thumbs || _options.thumbs )
-      generateThumbs(imageLinks);
+    // if( defaults.thumbs || _options.thumbs )
+    //   generateThumbs(imageLinks);
     
     // removed in favor of event delegation
     //$(imageLinks).off('click').on('click', onClick );
@@ -184,11 +184,11 @@
     var fn = open ? "on" : "off";
     $(doc)[fn]({ "keydown.photobox": keyDown, "mousewheel.photobox": scrollZoom });
     
-    if( options.thumbs ){
-      activeThumb.removeAttr('class');
-      $(win).on('resize.photobox', thumbsWindowResize);
-      thumbsWindowResize(); // initiate the function for the first time without any window resize
-    }
+    // if( options.thumbs ){
+    //   activeThumb.removeAttr('class');
+    //   $(win).on('resize.photobox', thumbsWindowResize);
+    //   thumbsWindowResize(); // initiate the function for the first time without any window resize
+    // }
   }
   
   function thumbsWindowResize(){
@@ -216,13 +216,12 @@
     // don't get crazy when user clicks next or prev buttons rapidly
     if( $(pbOverlay).hasClass('hide') )
       return false;
-    var img = (this.id == 'pbPrevBtn' || direction == 'prev') ? prevImage : nextImage,
-      mouseOverThumbs = thumbs.css('clear') == 'both';
+    var img = (this.id == 'pbPrevBtn' || direction == 'prev') ? prevImage : nextImage;
     
-    return changeImage(img, 0, mouseOverThumbs);
+    return changeImage(img, 0);
   }
   
-  function changeImage(imageIndex, firstTime, thumbClick){
+  function changeImage(imageIndex, firstTime){
     if( imageIndex >= 0 ){
       activeImage = imageIndex;
       activeURL = images[imageIndex][0];
@@ -238,9 +237,9 @@
       !options.loop && imageIndex == images.length-1 ? nextBtn.addClass('hide') : nextBtn.removeClass('hide');
       !options.loop && imageIndex == 0 ? prevBtn.addClass('hide') : prevBtn.removeClass('hide');
       
-      if( options.thumbs ){
-        changeActiveThumb(imageIndex, firstTime, thumbClick);
-      }
+      //if( options.thumbs ){
+        //changeActiveThumb(imageIndex, firstTime, thumbClick);
+      //}
       
       if( prevImage >= 0 ) preloadPrev.src = images[prevImage][0]; 
       if( nextImage >= 0 ) preloadNext.src = images[nextImage][0]; 

@@ -6,6 +6,7 @@
     <li><%= link_to 'Photos', '/photos', :id => 'Photos' %></li>
     <li><%= link_to 'Videos', '/videos', :id => 'Videos' %></li>
     <li><%= link_to 'Calendar', events_path, :id => 'Events' %></li>
+    <li><%= link_to 'Start Today', '/album', :id => 'Album' %></li>
     <% if admin? %>
       <li><%= link_to 'Venues', venues_path, :id => 'Venues' %></li>
       <li><%= link_to 'New Event', new_event_path, :id => 'NewEvent' %></li>

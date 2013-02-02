@@ -12,6 +12,7 @@ section.event{
 
 #venue {
   overflow: hidden;
+  padding-left: 50px;
 }
 
 #event_time h1 {
@@ -32,7 +33,7 @@ section.event{
 #event_side {
   width: 40%;
   float: left;
-  padding: 0px 25px 0px 0px;
+  padding: 0px 25px 0px 40px;
 }
 
 #events .calendar {
@@ -98,6 +99,7 @@ section.event{
   font-family: 'Droid Sans', sans-serif;
   font-size: 16px;
   font-weight: normal;
+  line-height: 2;
 }
 
 #event_description h1 {

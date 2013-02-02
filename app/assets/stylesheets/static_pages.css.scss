@@ -67,18 +67,24 @@ nav {
 }
 
 nav a, nav a:visited {
-  color: white;
+  
   font-family: 'Droid Sans';
   font-weight: bold;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2em;
 }
 
 nav a:hover {
   background-color: transparent;
-  font-size: 1.4em;
+  // font-size: 1.4em;
+  color: antiquewhite;
 }
 
 nav a.active {
-  font-size: 1.4em;
+  // font-size: 1.4em;
+  color: antiquewhite;
+
 }
 
 nav ul {
@@ -142,4 +148,39 @@ nav ul li {
 .videoFrame{
     border:1px solid #fff;
     outline:1px solid #aaa;
+}
+
+#album p{
+  font-family: 'Droid Sans', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+#album h1 {
+  font-size: 26px;
+  font-family: 'Lobster', arial, helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+
+#album {
+  width: 40%;
+  line-height: 2;
+  float: left;
+  padding-left: 40px;
+}
+
+#album_image img {
+  padding: 30px 0 30px 50px;
+}
+
+#buy_me {
+  position: fixed;
+  top: 50px;
+  right: 130px;
+}
+
+#social img {
+  padding-left: 10px;
 }

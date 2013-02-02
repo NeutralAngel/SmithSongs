@@ -1,13 +1,13 @@
 !(function(){
     'use strict';
     // Get some photos from Flickr for the demo
-    $('div.pbThumbs').remove();
+    
     $.ajax({
         url: 'http://api.flickr.com/services/rest/',
         data: {
             format: 'json',
             method: 'flickr.photosets.getPhotos',
-            photoset_id: '72157600137167600',
+            photoset_id: '72157632575410649',
             extras: 'original_format',
             api_key: '3fab12203c4aa75780e46f5dc87a742a'
         },
@@ -18,12 +18,13 @@
         $.each( data.photoset.photo, function(index, photo){
             url = 'http://farm' + photo.farm + '.staticflickr.com/' + photo.server + '/' + photo.id + '_' + photo.secret;
         var url_orig = 'http://farm' + photo.farm + '.staticflickr.com/' + photo.server + '/' + photo.id + '_' + photo.originalsecret + '_o.jpg';
+        var url_large = 'http://farm' + photo.farm + '.staticflickr.com/' + photo.server + '/' + photo.id + '_' + photo.secret + '_z.jpg';
 
                         http://farm{farm-id}.staticflickr.com/{server-id}/{id}_{o-secret}_o.(jpg|gif|png)
         var img = $('<img>').prop({'src': url + '_s.jpg', 'title': photo.title});
       
       var link = document.createElement('a');
-      link.href = url_orig;
+      link.href = url_large;
       link.appendChild(img[0]);
       gallery[0].appendChild(link);
 

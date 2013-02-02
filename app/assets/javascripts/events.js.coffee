@@ -24,6 +24,11 @@ init = ->
   title = $('title').text() 
   $('title').remove()
 
+  $("#buy_me").hide()
+  if title == "Album"
+    $("#buy_me").fadeIn()
+
+
   title = "NewEvent"  if title is "New Event"
 
   $('a').removeClass('active')

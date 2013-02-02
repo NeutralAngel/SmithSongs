@@ -20,6 +20,7 @@ Smithsongs::Application.routes.draw do
   match '/about', to: 'static_pages#about'
   match '/photos', to: 'static_pages#photos'
   match '/videos', to: 'static_pages#videos'
+  match '/album', to: 'static_pages#album'
   match '/store', to: 'store#index'
   match '/cart', to: 'carts#show'
   match '/login', to: 'sessions#new'
