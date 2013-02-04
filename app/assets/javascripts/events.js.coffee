@@ -23,6 +23,7 @@ init = ->
 
   title = $('title').text() 
   $('title').remove()
+  $('head').append('<title>' + title + ' | Steve Smith | Indianapolis Musician</title>');
 
   $("#buy_me").hide()
   if title == "Album"
