@@ -28,6 +28,12 @@ init = ->
   if title == "Album"
     $("#buy_me").fadeIn()
 
+  $(window).scroll ->
+    if $(window).scrollTop() is 0
+      $("#buy_me").fadeIn()
+    else
+      $("#buy_me").hide()
+
 
   title = "NewEvent"  if title is "New Event"
 
