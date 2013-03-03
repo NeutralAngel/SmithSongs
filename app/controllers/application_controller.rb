@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
   helper_method :admin?
 
-  before_filter :set_music, :load_current_events, :load_cart
+  before_filter :set_music, :load_current_events
 
   def set_music
     @music_list = 

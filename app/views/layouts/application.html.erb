@@ -26,9 +26,6 @@
   <div id="container">
     <div id="sidebar">
       <%= render "layouts/currentEvents" %>
-      <%= hidden_div_if(@cart.line_items.empty?, :id => "cart") do %>
-          <%= render @cart %>
-      <% end %>
     </div>
     <div id="main">
       <div id="page" data-pjax-container>
