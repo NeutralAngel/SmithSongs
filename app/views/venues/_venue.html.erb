@@ -14,6 +14,11 @@
   <%= @venue.city %>, <%= @venue.state %> <%= @venue.zip%>
   </span>
 </p>
+<% if @venue.photo_url %>
+  <div id="venue_photo">
+    <%= image_tag(@venue.photo_url, :width => '352') %>
+  </div>
+<% end %>
 </div>
 
 
