@@ -31,8 +31,11 @@ section.event{
   bottom: 35px;
 }
 #event_side {
-  width: 40%;
-  float: left;
+  @media only screen 
+    and (min-width : 1224px) {
+    width: 40%;
+    float: left;
+  }
   padding: 0px 25px 0px 40px;
 }
 
