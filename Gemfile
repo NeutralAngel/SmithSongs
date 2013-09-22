@@ -5,6 +5,8 @@ gem 'pjax_rails', '0.3.2'
 gem 'thin'
 gem 'jquery-ui-rails'
 gem 'stripe'
+gem 'rack-cors', :require => 'rack/cors'
+
 
 group :development, :test do
   gem 'sqlite3', '1.3.5'
