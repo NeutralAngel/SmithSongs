@@ -8,10 +8,11 @@ class EventsController < ApplicationController
     @events = Event.order(:event_date).all
     @events_by_date = @events.group_by(&:event_date)
     @date = params[:date] ? Date.parse(params[:date]) : Date.today
+    @current_events = Event.where("event_date >= ?", Time.now.to_date).order(:event_date)
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @events.to_json(:include => [:venue])}
+      format.json { render json: @current_events.to_json(:include => [:venue])}
     end
   end
 
